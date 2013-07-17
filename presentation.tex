@@ -5,11 +5,39 @@
 \author{Michelle Fullwood}
 \date{PyLadies Meetup Aug 2013}
 \usepackage{color}
-
+\newsavebox{\mysavebox}
+\usepackage{listings}
 \begin{document}
 
 \begin{frame}
 \titlepage
+\end{frame}
+
+
+\begin{lrbox}{\mysavebox}
+\begin{lstlisting}
+PCOD   QTY   DEPT    COST
+A169   100   Micro   0.58
+PDA1   1     Xray    600.00
+X280   5     ER      199.99
+...
+\end{lstlisting}
+\end{lrbox}
+
+\begin{frame}{Motivating regular expressions}
+
+{\bf Scenario:} You're evaluating Acme Company's products for a hospital.
+You're given a text file containing purchase records from Acme.
+Looking through the text file, however, you see that purchases from other companies
+are included as well, with no mention of which ones come from which!
+
+\begin{center}
+\fcolorbox{black}{white}{{\usebox{\mysavebox}}}
+\end{center}
+
+Luckily, you know that Acme's product codes consist of one
+uppercase letter followed by three digits.
+
 \end{frame}
 
 \end{document}
