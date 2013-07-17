@@ -8,6 +8,8 @@
 \newsavebox{\mysavebox}
 \usepackage{listings}
 
+\usepackage{verbdef}
+
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
@@ -225,7 +227,7 @@ with more special characters.
 
 \begin{itemize}
  \item \lstinline$^$ -- beginning of line
- \item \lstinline$\$$ -- end of line
+ \item \lstinline$\$$ -- end of line 
  \item \lstinline$\\b$ -- word boundary
 \end{itemize}
 
@@ -235,15 +237,36 @@ Examples: $\rightarrow$ Exercise 3
  \item \lstinline$\\bHallo\\b$
 \end{itemize}
 
-
 \end{frame}
 
+\verbdef{\specialchartext}{\^ \$ \. \\}
 
 \begin{frame}{Escaping characters}
 
 $\rightarrow$ Exercise 4
 
+\bigskip
 
+Why didn't the regex(es) work? (Discuss.)
+
+\begin{itemize}
+ \item When using characters that also have a special meaning, we have to escape them with a backslash
+ \item \specialchartext
+ \item Exception: within character sets [], metacharacters have their regular meaning.*
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Defining complements of a set}
+
+Sometimes it's easier to define a set of characters as ``everything other than X''.
+
+\begin{itemize}
+  \item \lstinline$\\S$ -- all non-whitespace characters
+  \item \lstinline$\\W$ -- all non-alphanumeric characters (also excludes underscore)
+  \item \lstinline$\\D$ -- all non-numeric characters
+  \item \lstinline$[^A-D]$ -- all characters other than A, B, C, D
+\end{itemize}
 
 \end{frame}
 
