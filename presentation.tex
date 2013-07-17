@@ -66,9 +66,9 @@ You're given a text file containing purchase records from Acme.
 Looking through the text file, however, you see that purchases from other companies
 are included as well, with no mention of which ones come from which!
 
-\begin{center}
-\fcolorbox{black}{white}{{\usebox{\mysavebox}}}
-\end{center}
+\vspace{1.5em}
+{\usebox{\mysavebox}}
+\vspace{1em}
 
 Luckily, you know that Acme's product codes consist of one
 uppercase letter followed by three digits.
@@ -85,5 +85,34 @@ So you get to work with a script:
 It's a bit clunky, but it works.
 
 \end{frame}
+
+\begin{lrbox}{\mysavebox}
+\begin{lstlisting}
+...The gloves(P180) felt sticky...
+...The X701 vacuum cleaner really sucked!...
+...
+\end{lstlisting}
+\end{lrbox}
+
+\begin{frame}{Motivating regular expressions}
+
+The next step in your evaluation is to collate evaluations
+emailed to you by hospital staff. These were free text,
+so you need to extract the product codes from within them
+to know which evaluation refers to which product.
+
+\vspace{1.5em}
+{\usebox{\mysavebox}}
+\vspace{1em}
+
+You might be able to think of ways to program this,
+but really...
+
+\begin{center}
+\textcolor{red}{It's time to bust out regular expressions.}
+\end{center}
+
+\end{frame}
+
 
 \end{document}
