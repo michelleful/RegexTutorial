@@ -139,8 +139,8 @@ Some simple things we can do with regular expressions:
 \begin{itemize}
  \item Match sets of characters
  \begin{itemize}
-   \item Character sets  \lstinline$[A-Z], [AGCT], [^AGCT]$
    \item Metacharacters  \lstinline$\\w, \\s, \\d$ 
+   \item Character sets  \lstinline$[A-Z], [AGCT], [^AGCT]$
  \end{itemize}
  \item Repeat things
  \begin{itemize}
@@ -176,5 +176,19 @@ How to practise the code as we go along:
 
 \end{frame}
 
+\begin{frame}{Defining sets of characters}
+ \begin{itemize}
+  \item List characters individually
+    \begin{itemize}
+      \item \lstinline$[AGCT]$ matches one character A, G, C or T.
+    \end{itemize}
+  \item Define a range of characters
+    \begin{itemize}
+      \item \lstinline$[A-T]$ matches one character between A and T.
+      \item \lstinline$[1-7]$ matches one digit between 1 and 7.
+      \item Ranges as defined by ASCII or Unicode tables
+    \end{itemize}
+ \end{itemize}
+\end{frame}
 
 \end{document}
