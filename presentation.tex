@@ -16,7 +16,7 @@
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
   basicstyle=\ttfamily\footnotesize,        % the size of the fonts that are used for the code
   keywordstyle=\bfseries,
-%  identifierstyle=\slshape,     % object names
+  identifierstyle=\color{red},     % object names
   commentstyle=\rmfamily\itshape, % italic comments
   stringstyle=\slshape,           % strings
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
@@ -92,9 +92,8 @@ It's a bit clunky, but it works.
 
 \begin{lrbox}{\mysavebox}
 \begin{lstlisting}
-...The gloves(P180) felt sticky...
-...The X701 vacuum cleaner really sucked!...
-...
+'...The gloves(P180) felt sticky...'
+'...The X701 vacuum cleaner really sucked!...'
 \end{lstlisting}
 \end{lrbox}
 
@@ -132,6 +131,26 @@ by Python's \lstinline$re$ module:
 
 \begin{frame}{Just what are regular expressions, anyway?}
 
+Regular expressions are strings that describe other sets of strings.
+
+\bigskip
+
+Some simple things we can do with regular expressions:
+\begin{itemize}
+ \item Match sets of characters
+ \begin{itemize}
+   \item Character sets  \lstinline$[A-Z]$
+   \item Metacharacters  \lstinline$\\w, \\s, \\d$ 
+ \end{itemize}
+ \item Repeat things
+ \begin{itemize}
+   \item A specific number of times \lstinline$^[3,5], ?$
+   \item An unlimited number of times \lstinline$*,+$
+ \end{itemize}
+\end{itemize}
+
 \end{frame}
+
+
 
 \end{document}
