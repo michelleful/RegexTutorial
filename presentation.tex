@@ -209,6 +209,7 @@ Metacharacters are pre-defined sets of characters.
       \item \lstinline$[A-T]$ matches one character between A and T.
       \item \lstinline$[1-7]$ matches one digit between 1 and 7.
       \item Ranges as defined by ASCII or Unicode tables
+      \item You can combine ranges: \lstinline$[a-cA-C]$
     \end{itemize}
  \end{itemize}
 
@@ -217,5 +218,33 @@ Metacharacters are pre-defined sets of characters.
 
 \end{frame}
 
+\begin{frame}{Defining where a regular expression applies}
+
+We can say a regex has to be at the start or the end of the string, or at word boundaries,
+with more special characters.
+
+\begin{itemize}
+ \item \lstinline$^$ -- beginning of line
+ \item \lstinline$\$$ -- end of line
+ \item \lstinline$\\b$ -- word boundary
+\end{itemize}
+
+Examples: $\rightarrow$ Exercise 3
+\begin{itemize}
+ \item \lstinline$^Hallo\$$
+ \item \lstinline$\\bHallo\\b$
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}{Escaping characters}
+
+$\rightarrow$ Exercise 4
+
+
+
+\end{frame}
 
 \end{document}
