@@ -444,11 +444,13 @@ need to use parentheses but don't want to capture the result.
 
 Here's another thing you can do with regexes -- replace some matched segment
 with another! For instance, say you want to protect all the email addresses
-on your site from being slurped up by a robot. 
+on your site from being slurped up by a robot. % TODO
 
 \end{frame}
 
 \begin{frame}{Back references}
+
+% TODO
 
 \end{frame}
 
@@ -546,7 +548,11 @@ Regular expressions are powerful, but you shouldn't reach for them whenever you 
 
 In particular, don't use regular expressions when:
 \begin{itemize}
- \item A simple string operation will do, e.g. \lstinline$'abc' in mystring$
+ \item A simple string operation will do
+	\begin{itemize} 
+      \item \lstinline$'abc' in mystring$
+      \item \lstinline$mystring.replace('x','y')$
+    \end{itemize}
  \item You're parsing something that uses matching brackets, e.g. HTML and XML.
    \begin{itemize}
      \item Use the \lstinline$BeautifulSoup$ or \lstinline$lxml$ libraries instead!
