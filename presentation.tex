@@ -425,6 +425,37 @@ programs because Python will compile and cache your last few regexes anyway.}
 
 \end{frame}
 
+\begin{frame}{Flags}
+
+Flags change the way metacharacters, character sets and spaces are interpreted.
+
+\bigskip
+
+Some of the flags:
+\begin{itemize}
+  \item \lstinline$re.IGNORECASE$ or \lstinline$re.I$ -- case-insensitive matching
+  \item \lstinline$re.MULTILINE$ or \lstinline$re.M$ -- makes \lstinline$^$ and \lstinline$\$$ match beginning and end of each newline
+  \item \lstinline$re.DOTALL$ or \lstinline$re.S$ -- makes . match any character {\it including} \lstinline$\\n$
+  \item \lstinline$re.UNICODE$ or \lstinline$re.U$ -- \lstinline$\\w,\\b$ reinterpreted according to Unicode definition
+  \item \lstinline$re.VERBOSE$ or \lstinline$re.V$ -- ignores whitespace and lets you use comments within the regex
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Flags}
+
+How to set flags:
+
+\bigskip
+
+On any \lstinline$re$ function, add the flags as the last parameter:
+
+\begin{itemize}
+  \item \lstinline$re.search(myregex, mystring, re.U)$
+  \item \lstinline$re.compile(myregex, re.MULTILINE | re.DOTALL)$
+\end{itemize}
+
+\end{frame}
 
 \def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
   \hbox{}\nobreak\hfil #1%
