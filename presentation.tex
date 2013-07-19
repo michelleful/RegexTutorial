@@ -135,18 +135,24 @@ by Python's \lstinline$re$ module:
 
 Regular expressions are strings that describe other sets of strings.
 
-\bigskip
+\begin{center}
+\begin{tabular}{cc}
+\lstinline$[A-Z]$ & \lstinline$\\d\{3\}$  \\
+$\left\{\begin{matrix} A \\ B \\ ... \\ Z \end{matrix}\right\}$ &
+$\left\{\begin{matrix} 0 \\ 1 \\ ... \\ 9 \end{matrix}\right\} x 3$ \\
+\end{tabular}
+\end{center}
 
-Some simple things we can do with regular expressions:
+What we need to know to write regular expressions:
 \begin{itemize}
- \item Match sets of characters
+ \item How to define sets of characters
  \begin{itemize}
    \item Metacharacters  \lstinline$\\w, \\s, \\d$ 
    \item Character sets  \lstinline$[A-Z], [AGCT], [^AGCT]$
  \end{itemize}
- \item Repeat things
+ \item How to define how many times to repeat them
  \begin{itemize}
-   \item A specific number of times \lstinline$^[3,5], ?$
+   \item A specific number of times \lstinline$\{3,5\}, ?$
    \item An unlimited number of times \lstinline$*,+$
  \end{itemize}
 \end{itemize}
@@ -161,17 +167,27 @@ We'll learn:
  \item The Python \lstinline$re$ functions that allow us to work with regexes
 \end{itemize}
 
+\end{frame}
+
+\begin{frame}{Playing along}
+
 How to practise the code as we go along:
 \begin{itemize}
- \item iPython
+ \item Install \lstinline$git$ (if you attended last month's meeting, you already have it!)
+ \item From the command line: \lstinline$git clone https://github.com/michelleful/RegexTutorial.git$
+ \item Run the exercises from the command line interface:
+ \begin{itemize}
+   \item \lstinline$cd exercises$
+   \item Open up \lstinline$ex1a.py$ etc as we move along
+   \item Edit these and run \lstinline$python ex1a.py$ from the CLI
+ \end{itemize}
+ \item OR if you have iPython:
    \begin{itemize}
-    \item Install iPython
-    \item Clone this repo from Github % TODO
     \item Run \lstinline$ipython notebook$ from the command line
     \item A browser window will automatically open
-    \item Select the only notebook
+    \item Select the only notebook, follow the instructions therein
    \end{itemize}
- \item Online
+ \item OR if you don't have git, play with the regexes online
    \begin{itemize}
     \item Enter regexes and strings into \lstinline$http://www.pythonregex.com/$
    \end{itemize}
@@ -340,6 +356,19 @@ We've gone through a lot of the syntax for regular expressions.
 
 \bigskip
 $\rightarrow$ Exercise 8
+
+\end{frame}
+
+\begin{frame}{Extracting matches}
+
+Sometimes we don't just want to check if something matches, we want to actually
+extract the matching string. The match object allows us access to this via .groups().
+
+\bigskip
+
+Example: We want to match strings that look like a first name followed by a last name.
+
+
 
 \end{frame}
 
