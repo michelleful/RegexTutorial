@@ -400,6 +400,16 @@ $\rightarrow$ Exercise 10
 
 \end{frame}
 
+\begin{frame}{Non-greedy matching}
+
+By default, operators like * and + are ``greedy''. They match as much
+as they can. In order to make it match in a ``non-greedy'' way, add a ?
+after the operator.
+
+\lstinputlisting[language=Python]{code_for_slides/greediness.py}
+
+\end{frame}
+
 \begin{frame}{Non-capturing parentheses}
 
 $\rightarrow$ Exercise 11
@@ -418,6 +428,10 @@ need to use parentheses but don't want to capture the result.
 \end{frame}
 
 \begin{frame}{Replacing matches}
+
+Here's another thing you can do with regexes -- replace some matched segment
+with another! For instance, say you want to protect all the email addresses
+on your site from being slurped up by a robot. 
 
 \end{frame}
 
