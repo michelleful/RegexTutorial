@@ -426,6 +426,23 @@ programs because Python will compile and cache your last few regexes anyway.}
 \end{frame}
 
 
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil #1%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{quote}}
+  {\signed{\usebox\mybox}\end{quote}}
+  
+\begin{frame}{When not to use regular expressions}
+
+\begin{aquote}{-- Jamie Zawinski}
+Some people, when confronted with a problem, think \\ ``I know, I'll use regular expressions.'' \\ Now they have two problems. \newline \newline
+\end{aquote}
+
+\end{frame}
+
 
 
 \end{document}
