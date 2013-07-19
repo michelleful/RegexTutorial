@@ -359,16 +359,56 @@ $\rightarrow$ Exercise 8
 
 \end{frame}
 
-\begin{frame}{Extracting matches}
+\begin{frame}{Doing stuff with regular expressions}
 
-Sometimes we don't just want to check if something matches, we want to actually
-extract the matching string. The match object allows us access to this via .groups().
+So far we've just been checking for matches with regexes. But we can do more!
+
+\bigskip
+
+We can:
+\begin{itemize}
+ \item Capture the matches and do stuff with them
+ \item Replace the match with something else
+ \item Split a string whenever you match the regex (not covered today)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Capturing matches}
+
+We capture matches by putting brackets around the part we want to extract.
+Then access the matched bits via the match object returned by .find() and .search()
 
 \bigskip
 
 Example: We want to match strings that look like a first name followed by a last name.
 
 
+
+\end{frame}
+
+\begin{frame}{Non-capturing parentheses}
+
+\end{frame}
+
+\begin{frame}{Replacing matches}
+
+\end{frame}
+
+\begin{frame}{Back references}
+
+\end{frame}
+
+\begin{frame}{Compiling regular expressions}
+
+
+\end{frame}
+
+\begin{frame}{Advanced topics}
+
+\begin{itemize}
+ \item 
+\end{itemize}
 
 \end{frame}
 
