@@ -558,15 +558,6 @@ On any \lstinline$re$ function, add the flags as the last parameter:
 
 \end{frame}
 
-\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
-  \hbox{}\nobreak\hfil #1%
-  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
-
-\newsavebox\mybox
-\newenvironment{aquote}[1]
-  {\savebox\mybox{#1}\begin{quote}}
-  {\signed{\usebox\mybox}\end{quote}}
-
 \begin{frame}{Named matches}
 
 It's possible to identify groups by names:
@@ -580,9 +571,9 @@ This can be helpful for keeping track of multiple matches.
   
 \begin{frame}{A word of caution on your newfound power...}
 
-\begin{aquote}{-- Jamie Zawinski}
-Some people, when confronted with a problem, think \\ ``I know, I'll use regular expressions.'' \\ Now they have two problems. \newline \newline
-\end{aquote}
+\includegraphics[scale=0.5]{images/perl_problems.png} 
+
+http://xkcd.com/1171/
 
 \end{frame}
 
