@@ -465,8 +465,19 @@ On any \lstinline$re$ function, add the flags as the last parameter:
 \newenvironment{aquote}[1]
   {\savebox\mybox{#1}\begin{quote}}
   {\signed{\usebox\mybox}\end{quote}}
+
+\begin{frame}{Named matches}
+
+It's possible to identify groups by names:
+
+\lstinputlisting[language=Python]{code_for_slides/named_matches.py}
+
+This can be helpful for keeping track of multiple matches.
+
+\end{frame}
+
   
-\begin{frame}{When not to use regular expressions}
+\begin{frame}{A word of caution on your newfound power...}
 
 \begin{aquote}{-- Jamie Zawinski}
 Some people, when confronted with a problem, think \\ ``I know, I'll use regular expressions.'' \\ Now they have two problems. \newline \newline
