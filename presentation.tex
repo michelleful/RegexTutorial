@@ -413,9 +413,19 @@ Example: We want to match strings that look like a first name followed by a last
 
 Sometimes you might see code like this:
 
-\lstinputlisting[language=Python]{code_for_slides/compiledregex.py}
+\lstinputlisting[language=Python]{code_for_slides/compiled_regex.py}
+
+{\small Once you have compiled your regex, you can call all the \lstinline$re$ functions
+directly as methods of the compiled regex. }
+
+\bigskip
+
+{\small Compiling your regex is a good idea but not necessary for small
+programs because Python will compile and cache your last few regexes anyway.}
 
 \end{frame}
+
+
 
 
 \end{document}
