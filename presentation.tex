@@ -402,6 +402,19 @@ $\rightarrow$ Exercise 10
 
 \begin{frame}{Non-capturing parentheses}
 
+$\rightarrow$ Exercise 11
+
+\bigskip
+
+Earlier, we used parentheses  \lstinline$()$ to disambiguate what the \lstinline$|$ operator
+referred to. But now we're getting unwanted captures.
+
+\bigskip
+
+The solution here is to use non-capturing parentheses. Replace the regular 
+parentheses  \lstinline$(...)$ with  \lstinline$(?P:...)$ whenever you
+need to use parentheses but don't want to capture the result.
+
 \end{frame}
 
 \begin{frame}{Replacing matches}
