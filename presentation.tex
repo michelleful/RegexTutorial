@@ -443,6 +443,21 @@ Some people, when confronted with a problem, think \\ ``I know, I'll use regular
 
 \end{frame}
 
+\begin{frame}{When not to use regular expressions}
 
+Regular expressions are powerful, but you shouldn't reach for them whenever you need some string matching.
+
+\bigskip
+
+In particular, don't use regular expressions when:
+\begin{itemize}
+ \item A simple string operation will do, e.g. \lstinline$'abc' in mystring$
+ \item You're parsing something that uses matching brackets, e.g. HTML and XML.
+   \begin{itemize}
+     \item Use the \lstinline$BeautifulSoup$ or \lstinline$lxml$ libraries instead!
+   \end{itemize}
+\end{itemize}
+
+\end{frame}
 
 \end{document}
