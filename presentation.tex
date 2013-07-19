@@ -376,13 +376,27 @@ We can:
 \begin{frame}{Capturing matches}
 
 We capture matches by putting brackets around the part we want to extract.
-Then access the matched bits via the match object returned by .find() and .search()
+Then access the matched bits via the match object returned by \lstinline$re.find()$ and \lstinline$re.search()$
 
 \bigskip
 
-Example: We want to match strings that look like a first name followed by a last name.
+Example: We want to match strings that look like a first name followed by a last name,
+and extract them separately.
 
+\lstinputlisting[language=Python]{code_for_slides/name_match.py}
 
+$\rightarrow$ Exercise 9
+
+\end{frame}
+
+\begin{frame}{Capturing multiple matches}
+
+Notice on the previous slide that we only captured the first instance of each name.
+In order to capture multiple matches, use \lstinline$re.findall()$.
+
+\lstinputlisting[language=Python]{code_for_slides/find_all.py}
+
+$\rightarrow$ Exercise 10
 
 \end{frame}
 
