@@ -32,7 +32,7 @@
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   keywordstyle=\color{blue},       % keyword style
   language=Python,                 % the language of the code
-  morekeywords={*,...},            % if you want to add more keywords to the set
+  morekeywords={*,^,...},            % if you want to add more keywords to the set
   numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=5pt,                   % how far the line-numbers are from the code
   numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
@@ -101,7 +101,7 @@ It's a bit clunky, but it works.
 
 \begin{frame}{Motivating regular expressions}
 
-The next step in your evaluation is to collate evaluations
+The next step in your evaluation is to collate comments
 emailed to you by hospital staff. These were free text,
 so you need to extract the product codes from within them
 to know which evaluation refers to which product.
@@ -137,7 +137,7 @@ Regular expressions are strings that describe other sets of strings.
 
 \begin{center}
 \begin{tabular}{cc}
-\lstinline$[A-Z]$ & \lstinline$\\d\{3\}$  \\
+\lstinline$`[A-Z]$ & \lstinline$\\d\{3\}'$  \\
 $\left\{\begin{matrix} A \\ B \\ ... \\ Z \end{matrix}\right\}$ &
 $\left\{\begin{matrix} 0 \\ 1 \\ ... \\ 9 \end{matrix}\right\} x 3$ \\
 \end{tabular}
@@ -179,7 +179,7 @@ How to practise the code as we go along:
  \begin{itemize}
    \item \lstinline$cd exercises$
    \item Open up \lstinline$ex1a.py$ etc as we move along
-   \item Edit these and run \lstinline$python ex1a.py$ from the CLI
+   \item Edit and run \lstinline$python ex1a.py$ from the CLI
  \end{itemize}
  \item OR if you have iPython:
    \begin{itemize}
@@ -187,7 +187,7 @@ How to practise the code as we go along:
     \item A browser window will automatically open
     \item Select the only notebook, follow the instructions therein
    \end{itemize}
- \item OR if you don't have git, play with the regexes online
+ \item OR if you don't have \lstinline$git$, play with the regexes online
    \begin{itemize}
     \item Enter regexes and strings into \lstinline$http://www.pythonregex.com/$
    \end{itemize}
@@ -199,15 +199,14 @@ How to practise the code as we go along:
 
 Metacharacters are pre-defined sets of characters.
  \begin{itemize}
-  \item \lstinline$.$ matches ANY character*
-  \item \lstinline$\\w$ matches alphanumeric characters and underscore \_
+  \item \lstinline$.$ matches ANY character except the newline character \lstinline$\\n$*
   \item \lstinline$\\d$ matches digits 0 through 9
+  \item \lstinline$\\w$ matches alphanumeric characters and underscore \_
   \item \lstinline$\\s$ matches whitespace characters
     \begin{itemize}
      \item Spaces 
      \item Tabs \lstinline$\\t$
      \item Newlines \lstinline$\\n\\r$
-     \item (Escape sequences \lstinline$\\f\\v$)
     \end{itemize}
  \end{itemize}
 
@@ -220,7 +219,7 @@ Metacharacters are pre-defined sets of characters.
   \item List characters individually
     \begin{itemize}
       \item \lstinline$[AGCT]$ matches one character A, G, C or T.
-      \item \lstinline$[\s\d]$ matches one whitespace character or digit
+      \item \lstinline$[\\s\\d]$ matches one whitespace character or digit
     \end{itemize}
   \item Define a range of characters
     \begin{itemize}
@@ -319,13 +318,13 @@ $\rightarrow$ Exercise 6
 \begin{frame}{Specifying alternatives}
 
 Sometimes you want to say match this OR that.
-You can do that with the | operator.
+You can do that with the \lstinline$|$ operator.
 
 \begin{itemize}
   \item \lstinline$Alex|Bill|Conrad$ matches any of these three names
 \end{itemize}
 
-Sometimes there can be confusion about what | refers to.
+Sometimes there can be confusion about what \lstinline$|$ refers to.
 In such cases, put brackets around the alternatives.
 
 \begin{itemize}
@@ -369,7 +368,7 @@ We can:
 \begin{itemize}
  \item Capture the matches and do stuff with them
  \item Replace the match with something else
- \item Split a string whenever you match the regex (not covered today)
+ \item Split a string whenever you match the regex \\ (not covered today)
 \end{itemize}
 
 \end{frame}
