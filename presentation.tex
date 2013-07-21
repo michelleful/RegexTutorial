@@ -195,6 +195,31 @@ How to practise the code as we go along:
 
 \end{frame}
 
+\begin{frame}{Aside: why r''?}
+
+All the regular expressions you'll see today will be within \lstinline$r''$.
+What's the deal with the \lstinline$r$?
+
+\bigskip
+
+\lstinline$r$ stands for raw strings. It means that backslashes are interpreted
+as backslashes, as opposed to regular strings, where they're interpreted as
+special characters.
+
+\bigskip
+
+You could define regexes using regular Python strings, but then you'd need
+to escape every backslash.
+
+\begin{center}
+\lstinline$r'\\d{3}' == '\\\\d{3}'$
+\end{center}
+
+And if you're searching for backslashes, that would mean needing to write:
+\lstinline$'\\\\\\\\'$, as opposed to just \lstinline$r'\\\\'$.
+
+\end{frame}
+
 \begin{frame}{Metacharacters}
 
 Metacharacters are pre-defined sets of characters.
