@@ -197,6 +197,25 @@ How to do the accompanying exercises as we go along:
 
 \end{frame}
 
+\begin{frame}{Metacharacters}
+
+Metacharacters are pre-defined sets of characters.
+ \begin{itemize}
+  \item \lstinline$.$ matches ANY character except the newline character \lstinline$\\n$*
+  \item \lstinline$\\d$ matches digits 0 through 9
+  \item \lstinline$\\w$ matches alphanumeric characters and underscore \_
+  \item \lstinline$\\s$ matches whitespace characters
+    \begin{itemize}
+     \item Spaces 
+     \item Tabs \lstinline$\\t$
+     \item Newlines \lstinline$\\n\\r$
+    \end{itemize}
+ \end{itemize}
+
+ \bigskip
+ $\rightarrow$ Exercise 1
+\end{frame}
+
 \begin{frame}{Aside: why r''?}
 
 All the regular expressions you'll see today will be within \lstinline$r''$.
@@ -220,25 +239,6 @@ to escape every backslash.
 And if you're searching for backslashes, that would mean needing to write:
 \lstinline$'\\\\\\\\'$, as opposed to just \lstinline$r'\\\\'$.
 
-\end{frame}
-
-\begin{frame}{Metacharacters}
-
-Metacharacters are pre-defined sets of characters.
- \begin{itemize}
-  \item \lstinline$.$ matches ANY character except the newline character \lstinline$\\n$*
-  \item \lstinline$\\d$ matches digits 0 through 9
-  \item \lstinline$\\w$ matches alphanumeric characters and underscore \_
-  \item \lstinline$\\s$ matches whitespace characters
-    \begin{itemize}
-     \item Spaces 
-     \item Tabs \lstinline$\\t$
-     \item Newlines \lstinline$\\n\\r$
-    \end{itemize}
- \end{itemize}
-
- \bigskip
- $\rightarrow$ Exercise 1
 \end{frame}
 
 \begin{frame}{Defining sets of characters}
@@ -518,7 +518,7 @@ $\rightarrow$ Exercise 13
 
 \begin{frame}{Back references}
 
-You can also use back references within the regex you use to match
+You can also use back references within a regex
 to find multiple copies of the same string.
 
 \lstinputlisting[language=Python]{code_for_slides/backrefs2.py}
