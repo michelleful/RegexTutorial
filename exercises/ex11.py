@@ -4,6 +4,8 @@
 # Try putting capturing parentheses around the whole thing
 # and examine the match object that results
 
+import re
+
 # Instructions: in the regex below, 
 # place capturing parentheses in the appropriate place
 email_regex = r'\w+@\w+\.(com|org|edu|net)' 

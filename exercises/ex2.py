@@ -5,13 +5,13 @@
 # WITHOUT using metacharacters (escape sequences like \n are fine)
 
 # Exercise 2a
-digit_regex     = r'[...]' # match definition of \d
+digit_regex     = r'[0-9]' # match definition of \d
 
 # Exercise 2b
-wordlike_regex  = r'[...]' # match definition of \w (at least, for English)
+wordlike_regex  = r'[a-zA-Z0-9_]' # match definition of \w (at least, for English)
 
 # Exercise 2c
-spacelike_regex = r'[...]' # match definition of \s
+spacelike_regex = r'[\n\t\r ]' # match definition of \s
 
 # No need to edit below this point. Run this program to see if your answers were correct.
 from test_regex import test_regex

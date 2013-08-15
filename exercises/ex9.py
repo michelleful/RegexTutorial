@@ -2,8 +2,11 @@
 
 # Write a regular expression to capture all email addresses that have the form 
 # ...@pyladies.org
+# Furthermore we just want to capture the username BEFORE the @.
 
-pyladies_regex = r'...' # replace the ellipsis with your email address
+import re
+
+pyladies_regex = r'(\S+)\@pyladies\.org' # replace the ellipsis with your email address
 
 # Then use it to capture email addresses from the following list of records
 # disclaimer: not actual email addresses :P
@@ -15,6 +18,6 @@ Michelle michelle@pyladies.org
 
 # your code here
 for record in our_members.split('\n'):
-    m = ... # put your code here
-    if m:
-        print m.group(0)
+    m = re.search(pyladies_regex, record) # put your code here
+    if re.search(pyladies_regex, record):
+        print m.group(1)

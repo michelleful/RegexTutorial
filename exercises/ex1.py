@@ -2,10 +2,14 @@
 
 import re
 
-# Match sequences that look like this: A1b c2D - pairs of letter-digit-letter sequences, separated by a space-lik character.
+# Match sequences that look like this: A1b c2D - pairs of letter-digit-letter 
+# sequences, separated by a space-like character.
 # Your regular expression should consist of a string of metacharacters.
 
-regex  = r'...' # replace the ellipsis with a suitable regular expression
+regex  = r'\w\d\w\s\w\d\w' # replace the ellipsis with a suitable regular expression
+
+# Note from presentation: \w includes numeric digits, so this would also match things
+# like '111 111'
 
 # Then run the script and look at the output of the print statements below.
 

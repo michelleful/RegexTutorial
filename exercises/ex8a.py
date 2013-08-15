@@ -8,11 +8,12 @@ import re
 def remove_e_words(wordlist):
     non_e_words = list()
     for word in wordlist:
-        if ...: # replace the ellipsis with your code
+        if re.search(r'^[^eE]+$', word): # replace the ellipsis with your code
             non_e_words.append(word)
     return non_e_words
 
 assert remove_e_words(['Acorn','Bread','Cornflakes','Dairy','Elephant ears']) \
     == ['Acorn', 'Dairy']
+# will print nothing if successful
 
 # Discuss: does it make sense to use re.match or re.search in this instance?

@@ -1,5 +1,7 @@
 # Exercise 5a - Set complements
 
+from test_regex import test_regex
+
 # Let's rearrange the metacharacter_regex from Exercise 4d. 
 # Why doesn't it work as we wanted?
 
@@ -9,7 +11,7 @@ test_regex('Metacharacter regex', metacharacter_regex, '^$.', 'a1')
 # Edit the metacharacter regex below to make it work,
 # in some way OTHER than rearranging the characters again
 
-edited_metacharacter_regex = r'[^$.]'
+edited_metacharacter_regex = r'[\^\$\.]'
 test_regex('Edited Metacharacter regex', edited_metacharacter_regex, '^$.', 'a1')
 
 # So, saying "within character sets [], metacharacters have their 

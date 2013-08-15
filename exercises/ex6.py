@@ -8,7 +8,7 @@ from test_regex import test_regex
 # Write a regex that matches the words bad, baad, baaad 
 # for any arbitrary number of a's
 
-animal_farm_bleat_regex = r'...' # replace the ellipsis with your regex
+animal_farm_bleat_regex = r'\bba+d\b' # replace the ellipsis with your regex
 
 test_regex('Animal farm bleat', animal_farm_bleat_regex, 
     ['baaaaaaad', 'This is baaaaaaaaaaad!'],  # should match these
@@ -21,7 +21,7 @@ test_regex('Animal farm bleat', animal_farm_bleat_regex,
 
 # Write a regex that matches the word baaad (3 a's) up to baaaaaaaaaad (10 a's).
 
-animal_farm_short_bleat_regex = r'...'
+animal_farm_short_bleat_regex = r'\bba{3,10}d\b'
 
 test_regex('Animal farm short bleat', animal_farm_short_bleat_regex, 
     ['baaaaaaad', 'This is baaaaaaaaaad!'], # should match these
@@ -34,10 +34,10 @@ test_regex('Animal farm short bleat', animal_farm_short_bleat_regex,
 
 # Write a regex that matches both the strings 'homebrew' and 'home-brew'
 
-homebrew_regex = r'...'
+homebrew_regex = r'home-?brew'
 test_regex('Homebrew regex', homebrew_regex, 
     ['homebrew', 'home-brew'], # should match these
-    ['home brew']) # shouldn't match these
+    ['home brew', 'home-----brew']) # shouldn't match these
     
 
 
@@ -51,7 +51,7 @@ test_regex('Homebrew regex', homebrew_regex,
 # You decide to filter your wordlist so it contains only words with no E's. 
 # Write a regular expression to filter the dictionary.
 
-no_e_regex = r'^...$' # replace the ellipsis with a regex 
+no_e_regex = r'^[^eE]*$' # replace the ellipsis with a regex 
                       # that matches only strings without E's. 
                       # Spaces are acceptable.
 test_regex('No E regex', no_e_regex, 

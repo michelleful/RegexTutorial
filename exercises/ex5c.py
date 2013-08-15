@@ -4,12 +4,14 @@
 # Acme company uses product codes with A,B,C followed by three digits.
 # Axeme company uses product codes X,Y,Z followed by three digits.
 
+from test_regex import test_regex
+
 # Write a regex to extract lines with just Acme and Axeme's product codes, 
 # *using a set complement* rather than r'[ABCXYZ]...'
 
 # Also, make sure that the product code occurs at the *end* of the line
 
-acme_axeme_regex = r'...' # replace the ellipsis with your regex
+acme_axeme_regex = r'[^D-W]\d\d\d' # replace the ellipsis with your regex
 
 # No need to edit below this line
 matches = ['This line contains Acme product code C180', 
