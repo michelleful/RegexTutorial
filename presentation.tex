@@ -376,7 +376,7 @@ We've gone through a lot of the syntax for regular expressions.
 \begin{frame}{Python functions for dealing with regular expressions}
 
 \begin{itemize}
-  \item \lstinline$re.find(regex, string)$ -- returns a match group if the string starts with the regex pattern, \lstinline$None$ otherwise.
+  \item \lstinline$re.match(regex, string)$ -- returns a match group if the string starts with the regex pattern, \lstinline$None$ otherwise.
   \item \lstinline$re.search(regex, string)$ -- returns a match group if the string contains the regex pattern, \lstinline$None$ otherwise.
 \end{itemize}
 
@@ -403,7 +403,7 @@ We can:
 \begin{frame}{Capturing matches}
 
 We capture matches by putting brackets around the part we want to extract.
-Then access the matched bits via the match object returned by \lstinline$re.find()$ and \lstinline$re.search()$
+Then access the matched bits via the match object returned by \lstinline$re.match()$ and \lstinline$re.search()$
 
 \bigskip
 
